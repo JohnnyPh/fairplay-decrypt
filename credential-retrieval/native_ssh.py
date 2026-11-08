@@ -43,6 +43,8 @@ class SSHDevice:
             "-o",
             "BatchMode=yes",
             "-o",
+            "IgnoreUnknown=WarnWeakCrypto",
+            "-o",
             "WarnWeakCrypto=no-pq-kex",
             "-o",
             "StrictHostKeyChecking=accept-new",

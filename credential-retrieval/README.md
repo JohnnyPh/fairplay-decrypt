@@ -3,7 +3,8 @@
 Retrieve a reusable 16-byte FairPlay account credential from a jailbroken
 device. The host needs Python, `idevice_id`, `iproxy`, and USB SSH.
 
-Supports iOS 10+.
+Targets iOS 10+. A [selector issue](https://github.com/EthanArbuckle/fairplay-decrypt/pull/35)
+affects retrieval on iOS 14.0–14.4.
 
 ## Retrieve
 
@@ -25,10 +26,8 @@ with `decrypt.py --credential`.
 
 ## Apple Arcade
 
-Apple Arcade apps need a different credential from regular App Store apps.
-The normal credential decrypts regular apps, and the Arcade credential
-decrypts Arcade apps. You need both to decrypt both types. Each credential
-works with apps from the Apple Account it came from.
+Apple Arcade and regular App Store apps use separate credentials for the
+same Apple Account.
 
 To retrieve an Arcade credential, pass an Arcade IPA with `--ipa` and have
 an Arcade app from that account installed on the device.
